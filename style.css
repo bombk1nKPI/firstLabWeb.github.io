@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "header header header"
+    "header header header"
+    "left   nav   right"
+    "left   main   right"
+    "left   main   right"
+    "left   main   right"
+    "left   main   right"
+    "left   main   other"
+    "footer footer footer"
+    "footer footer footer"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  word-break: break-word;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: lightblue;
+}
+
+footer {
+  grid-area: footer;
+  background: lightblue;
+}
+
+nav {
+  grid-area: nav;
+  background: lightgreen;
+}
+
+.nav-content,.left-content, .right-content, .main-content, .other-content {
+ display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.other {
+  grid-area: other;
+  background: lightgreen;
+}
+
+aside.left {
+  grid-area: left;
+  background: #e2e3e7;
+}
+
+aside.right {
+  grid-area: right;
+  background: #e2e3e7;
+}
+
+main {
+  grid-area: main;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+main img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+}
+
+.X-space {
+  margin: 20px;
+  display: flex;
+  
+  flex-direction: column;
+  
+  justify-content: center;
+
+}
+
+.Y-space {
+  margin: 20px;
+  display: flex;
+  
+  flex-direction: column;
+  
+  justify-content: center;
+
+  align-items: flex-end; 
+
+}
+
+.header-nav {
+  margin: 0;
+  background: #007acc; /* синій фон для navbar */
+  padding: 10px 20px;
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* відстань між пунктами меню */
+}
+
+.header-nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.header-nav li a:hover {
+  text-decoration: underline;
+}
+
